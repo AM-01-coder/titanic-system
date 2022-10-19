@@ -2,7 +2,6 @@
 from flask import Flask, render_template,request
 import pickle
 import numpy as np
-#from sklearn.ensemble.forest import RandomForestClassifier
 
 app= Flask(__name__)
 
@@ -71,11 +70,6 @@ def predict():
        
    return render_template('Home.html', prediction_text1=result, class11 = class1, gender1=gender, siblings1=siblings, embarked1=embarked)
 
-@app.route('/api')
-def api():
-    with open('data.json', mode='r') as my_file:
-        text = my_file.read()
-        return text
 
 if __name__ == "__main__":
     app.run(debug=True, use_reloader=False)
