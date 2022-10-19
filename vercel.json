@@ -1,5 +1,7 @@
 {
     "rewrites": [
-        { "source": "/(.*)", "destination": "/templates/Home.html" }
+        { "source": "/(.*)", "destination": "/app.py" }
     ]
 }
+
+
